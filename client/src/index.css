@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.rich-text {
+  font-size: 15px;
+  color: #7a7b7d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.rich-text strong {
+  font-weight: 700;
+}
+
+.rich-text p {
+  margin-bottom: 16px;
+}
+
+.rich-text ol {
+  margin-left: 30px;
+  list-style-type: decimal;
+  margin-top: 5px;
+  padding: 8px;
+}
+
+.rich-text ul {
+  margin-left: 30px;
+  list-style-type: disc;
+}
+.animate-logo-scroll {
+  animation: logoScroll 20s linear infinite;
+}
